@@ -1,0 +1,37 @@
+// Initialize Firebase
+const firebaseConfig = {
+    apiKey: "YOUR_FIREBASE_API_KEY",
+    authDomain: "your-app.firebaseapp.com",
+    projectId: "your-app",
+    storageBucket: "your-app.appspot.com",
+    messagingSenderId: "your-messaging-sender-id",
+    appId: "your-app-id"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+// Function to send push notification
+function sendPushNotification(message, targetDeviceToken) {
+    const messaging = firebase.messaging();
+
+    messaging
+        .send({
+            token: targetDeviceToken,
+            notification: {
+                title: "Alert Notification",
+                body: message
+            },
+        })
+        .then((response) => {
+            console.log("Successfully sent push notification:", response);
+        })
+        .catch((error) => {
+            console.error("Error sending push notification:", error);
+        });
+}
+
+// Example usage
+const alertMessage = "Suspicious activity detected at location XYZ.";
+const lawEnforcementDeviceToken = "TARGET_DEVICE_TOKEN";
+
+sendPushNotification(alertMessage, lawEnforcementDeviceToken);

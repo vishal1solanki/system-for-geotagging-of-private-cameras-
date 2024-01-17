@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Analysis System - Camera Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Camera Management Screen</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Camera Model</th>
+        <th>Resolution</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Sample camera data (to be replaced with dynamic data) -->
+      <tr>
+        <td>John Doe</td>
+        <td>john@example.com</td>
+        <td>Model XYZ</td>
+        <td>1080p</td>
+        <td>
+          <button onclick="editCamera()">Edit</button>
+          <button onclick="deleteCamera()">Delete</button>
+        </td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+
+  <a href="registration.html">Go to Registration Screen</a>
+
+  <script src="script.js"></script>
+</body>
+</html>

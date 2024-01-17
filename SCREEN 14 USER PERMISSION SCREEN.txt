@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Analysis System - User Permissions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>User Permissions Screen</h1>
+
+  <!-- Placeholder for user permissions content -->
+
+  <a href="camera_management.html">Go to Camera Management</a>
+
+  <script src="script.js"></script>
+</body>
+</html>

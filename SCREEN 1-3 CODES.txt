@@ -1,0 +1,130 @@
+GEO TAGGINF CODES 
+SCREEN 1 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Analysis System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Welcome to the Video Analysis System</h1>
+
+  <a href="analysis.html">Go to Analysis Screen</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Analysis System - Analysis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+
+
+
+
+
+
+  <h1>Analysis Screen</h1>
+
+  <video id="videoElement" width="640" height="480" controls></video>
+
+  <label for="eventType">Select Suspicious Event:</label>
+  <select id="eventType">
+    <option value="person">Person</option>
+    <option value="vehicle">Vehicle</option>
+    <!-- Add more event types as needed -->
+  </select>
+
+  <button onclick="startAnalysis()">Start Analysis</button>
+
+  <a href="alerts.html">Go to Alerts Screen</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Analysis System - Alerts</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Alerts Screen</h1>
+
+  <div id="alertContainer"></div>
+
+  <a href="index.html">Go to Home Page</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+video {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+select, button {
+  margin-bottom: 20px;
+}
+
+a {
+  display: block;
+  margin-top: 20px;
+  color: #007bff;
+}
+
+
+
+function startAnalysis() {
+  var eventType = document.getElementById("eventType").value;
+  alert("Analyzing video for suspicious " + eventType);
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Analysis System - Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Registration Screen</h1>
+
+  <form id="registrationForm" onsubmit="submitRegistration(event)">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="cameraModel">Camera Model:</label>
+    <input type="text" id="cameraModel" name="cameraModel" required>
+
+    <label for="resolution">Resolution:</label>
+    <input type="text" id="resolution" name="resolution" required>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <a href="alerts.html">Go to Alerts Screen</a>
+
+  <script src="script.js"></script>
+</body>
+</html>

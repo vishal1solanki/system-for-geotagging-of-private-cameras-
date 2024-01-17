@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Camera Feeds</title>
+    <style>
+        /* Your CSS styles here */
+        /* Basic styling for readability and layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Neutral background color */
+            margin: 0;
+            padding: 0;
+            color: #333; /* Text color */
+        }
+        .header {
+            background-color: #0058a3; /* Rajasthan Police blue color */
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding-top: 30px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #0058a3; /* Rajasthan Police blue color */
+        }
+        .camera-feed {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .feed-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Aspect ratio for 16:9 video */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .back-btn {
+            padding: 10px 20px;
+            background: #0058a3; /* Rajasthan Police blue color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .back-btn:hover {
+            background: #004280; /* Darker shade for hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Live Camera Feeds</h1>
+        <a class="back-btn" href="dashboard.html">Back to Dashboard</a>
+    </div>
+
+    <div class="container">
+        <h2>Camera Feeds Overview</h2>
+        <div class="camera-feed">
+            <div class="feed-header">Camera 1</div>
+            <div class="video-container">
+                <!-- Embedded live video feed -->
+                <iframe src="camera_feed_url_1" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="camera-feed">
+            <div class="feed-header">Camera 2</div>
+            <div class="video-container">
+                <!-- Embedded live video feed -->
+                <iframe src="camera_feed_url_2" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <!-- Add more camera feeds similarly -->
+    </div>
+
+</body>
+</html>

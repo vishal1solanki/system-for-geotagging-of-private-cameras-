@@ -1,0 +1,26 @@
+// map.js
+document.addEventListener("DOMContentLoaded", function () {
+    // Initialize the map centered around Jaipur, Rajasthan
+    var map = L.map('map').setView([26.9124, 75.7873], 12);
+
+    // Add the base map tiles (you can use different map providers)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+    }).addTo(map);
+
+    // Example camera locations with metadata
+    var cameraLocations = [
+        { name: 'Camera 1', location: [26.9124, 75.7873], specifications: 'Specifications for Camera 1' },
+        // Add more camera locations similarly
+    ];
+
+    // Loop through camera locations and create markers with pop-ups
+    cameraLocations.forEach(function (camera) {
+        var marker = L.marker(camera.location).addTo(map);
+        marker.bindPopup(`
+            <b>${camera.name}</b><br>
+            Location: ${camera.location[0]}, ${camera.location[1]}<br>
+            Specifications: ${camera.specifications}
+        `);
+    });
+});
